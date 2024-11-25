@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己設輪播圖</title>
+    <link rel="stylesheet" href="./css/bootstrap5.3.3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* 最小尺寸 inner item img 都要抓到*/
+        #FungFung {
+            height: 250px;
+        }
+
+        #FungFung .carousel-inner,
+        #FungFung .carousel-item,
+        #FungFung .carousel-item img {
+            height: 100%;
+        }
+
+        #FungFung .carousel-item img {
+            /* cover 是讓圖片「完美填滿容器」的好幫手，裁一點邊緣，換取視覺平衡 */
+            object-fit: cover;
+        }
+
+        @media(min-width:576px) {
+            #FungFung {
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        data-bs-ride="carousel" 啟動輪播功能 
+        data-bs-interval = "5000" 設定輪播間隔時間，單位為毫秒
+        .carousel-fade 讓輪播切換效果變成淡入淡出
+        .carousel-dark 深色模式，讓文字變成黑色
+    -->
+    <!-- id 與指示器、上一張、下一張按鈕有關，要一起改 -->
+    <div id="FungFung" class="carousel slide carousel-fade carousel-dark" data-bs-ride="carousel "
+        data-bs-interval="3000">
+        <!-- 指示器 (下面三條線) -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#FungFung" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#FungFung" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#FungFung" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#FungFung" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#FungFung" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <!-- 輪播內容(ex.圖片) .carousel-item 為一個輪播單位，第一個開始的設定是 .active -->
+        <div class="carousel-inner">
+            <!-- 一個地方只有一個 active -->
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/1920/600/?random=10" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1920/600/?random=9" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1920/600/?random=8" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1920/600/?random=7" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1920/600/?random=6" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 上一張按鈕 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#FungFung" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <!-- 下一張按鈕 -->
+        <button class="carousel-control-next" type="button" data-bs-target="#FungFung" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

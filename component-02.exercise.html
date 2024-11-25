@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.使用 bootstrap 的 css -->
+    <link rel="stylesheet" href="./css/bootstrap5.3.3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.css'
+        integrity='sha512-ywmPbuxGS4cJ7GxwCX+bCJweeext047ZYU2HP52WWKbpJnF4/Zzfr2Bo19J4CWPXZmleVusQ9d//RB5bq0RP7w=='
+        crossorigin='anonymous' />
+    <style>
+        :root {
+            --bs-coffee-rgb: 85, 43, 8
+        }
+
+        .bg-coffee {
+            --bs-bg-opacity: 1;
+            background-color: rgba(var(--bs-coffee-rgb), var(--bs-bg-opacity)) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+    .navbar-expand-* 指通過某個斷點展開導覽列，若無則永遠處於摺疊狀態(漢堡按鈕)
+    .navbar-light 導覽列背景色，淺色模式 => 白色字，搭配淺色背景
+    .navbar-dark 導覽列背景色，深色模式 => 黑色字
+    .fixed-top 固定在網頁上方
+    .fixed-bottom 固定在網頁下方
+-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top py-4">
+        <!-- 可以使用 .container 固定寬度容器-->
+        <div class="container">
+            <a class="navbar-brand " href="#">
+                <img src="https://livedemo00.template-help.com/wt_prod-10492/theme/images/logo-default-280x92.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Fung">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="Fung" class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-5">
+                        <a class="nav-link active" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">PAGES</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">GALLERY</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">SHOP</a>
+                </ul>
+                <form class="d-flex">
+                    <i class="bi bi-search me-3 fs-5"></i>
+                    <i class="bi bi-cart-check me-3 fs-5"></i>
+                    <i class="bi bi-list me-3"></i>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <img class="container-fluid mt-5" src="https://picsum.photos/1600/800/?random=10">
+    </div>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
